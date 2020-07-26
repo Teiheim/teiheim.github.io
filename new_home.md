@@ -1,0 +1,5 @@
+[comment]: <> (Basic Info)
+[comment]: <> (Education)
+[comment]: <> (Work Experience)
+[comment]: <> (Projects)
+[comment]: <> (Contact)
