@@ -16,10 +16,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 }
 .card.image.fit {
   /* Add shadows to create the "card" effect */
+  overflow:scroll;
   box-shadow: 10px 10px;
   border: solid 1px black;
   transition: 0.3s;
-  height: 100vh;
+  height: 80vh;
   margin: 0px 1%;
   width:45%;
   padding-left: 0px;
@@ -58,10 +59,34 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
   background-color: #6fc3df;
   box-shadow: 10px 10px;
   margin-top:3%;
-  margin-bottom:3%;
+  margin-bottom:3%;}
 
+.showMore.mk{
+  display:none;
 }
+
 </style>
+
+<script>
+
+function showMore(btn) {
+
+  var dots = document.querySelector(".dots.".concat(btn));
+  var moreText = document.querySelector(".showMore.".concat(btn));
+  var btnText = document.querySelector(".showBtn.".concat(btn));
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+</script>
 
 <body>
 
@@ -100,7 +125,15 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     </div>
     </div>
       <div class="box">
-        <p>Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus lorem ipsum.</p>
+        <p>My name is Teiheim and I am a recent graduate of Williams College and software engineer with a particular focus on full-stack development!
+<br />
+I have loved computers from childhood, but I first started with web development in my junior year of highschool with iAnalyst. That was an eye-opening experience into everything that it takes into create and maintain a website. Now after six years of improving my skills, I am excited to continue growing and revolutionizing how people interact with the internet!
+<br />
+In this current moment, I am falling in love with functional programming principles and the future of the internet.
+<br />
+In my freetime, I am an avid dancer and cook. Learning new dances and cooking meals helps me relax from day to day.
+<br />
+Feel free to contact me below with an inquiries!</p>
       </div>
     </section>
     <section id="education" class="inner">
@@ -148,14 +181,15 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
       <h3>Projects</h3>
         <div style="margin:0 auto;" class="row uniform">
         <div class="card image fit">
-          <img src="{% link assets/images/pic08.jpg %}" alt="Avatar" style="width:100%">
+          <img src="{% link assets/images/mk.png %}" alt="Avatar" style="width:100%">
           <div class="container">
-            <h4><b>Project For Fun: Machi Koro</b></h4>
+            <h4><b><a href="https://github.com/Teiheim/Machi-Koro-cljs">Project For Fun: Machi Koro</a></b></h4>
             <p>The Machi Koro card game written functionally in Clojurescript! Machi Koro is a small and quick deck-building game that relies a bit on luck. I wanted to play this game with my friends again, but did not find anything satisfying to use so I am trying to make my own. It is written functionally because board and card games tend to follow rules to alter the initial state of the game. If you couple this with a simple website where most of the modifications to the DOM are also rules applied to an initial state, it seemed natural to want to program this game in a functional way</p>
+            <!-- <button onclick="showMore('mk')" class="showBtn mk">Read more</button> -->
           </div>
         </div>
         <div class="card image fit">
-          <img src="{% link assets/images/pic08.jpg %}" alt="Avatar" style="width:100%">
+          <img src="{% link assets/images/yy.jpg %}" alt="Avatar" style="width:100%">
           <div class="container">
             <h4><b>School Project: Yayoi Programming Language</b></h4>
             <p>Kusama Yayoi is contemporary artists. The concept of infinity is her own way of acheiving self-obliteration. This can be seen in her pieces featuring the numerous polka dots. In an attempt to recreate this style of art, my partner and I created a domain specific language using F# so that one may code an art piece inspired by Yayoi.</p>
@@ -164,27 +198,27 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
       </div>
       <div style="margin:0 auto;margin-top:2%;" class="row uniform">
         <div class="card image fit">
-          <img src="{% link assets/images/pic08.jpg %}" alt="Avatar" style="width:100%">
+          <img src="{% link assets/images/lf.png %}" alt="Avatar" style="width:100%">
           <div class="container">
             <h4><b>School Project: Central Location Finder</b></h4>
             <p>Written in Python and using the Flask web framework, when two people live in a large city it can be difficult to find activities an equal distance away. This central location finder solves that problem using two addresses inputted by the user and Google's Maps API.</p>
           </div>
         </div>
         <div class="card image fit">
-          <img src="{% link assets/images/pic08.jpg %}" alt="Avatar" style="width:100%">
+          <img src="{% link assets/images/cm.jpg %}" alt="Avatar" style="width:100%">
           <div class="container">
-            <h4><b>School Project: commUnity</b></h4>
+            <h4><b><a href="https://pelite376.github.io/">School Project: commUnity</a></b></h4>
             <p>Different in style from other projects. This project is primarily focused on design with no implementation. In order to solve the problem of gentrification, my team created a something to help empower the local residents to resist oppressive forces.</p>
           </div>
         </div>
       </div>
 
     </section>
-    <section class="inner">
+    <section id="contact" class="inner">
       <h3>Contact</h3>
     </section>
 
-    <!-- Two -->
+    <!-- Two
     <section id="two">
       <div class="inner">
         <header class="major">
@@ -195,7 +229,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
           <li><a href="landing.html" class="button next">Get Started</a></li>
         </ul>
       </div>
-    </section>
+    </section>-->
 
   </div>
 
