@@ -1,6 +1,6 @@
 # site settings
-title: Teiheim Edwards
-subtitle: Resume Website
+title: Teiheim
+subtitle: Edwards
 email: eteiheim@gmail.com
 description: When I dare to be powerful, to use my strength in the service of my vision,<br /> then it becomes less and less important whether I am afraid.<br />-Audre Lorde
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -27,7 +27,7 @@ github_url: https://github.com/Teiheim
 linkedin_url: www.linkedin.com/in/teiheim-edwards
 pinterest_url:
 slack_url:
-twitter_url: https://twitter.com/andrewbanchich
+twitter_url: 
 
 # build settings
 markdown: kramdown
